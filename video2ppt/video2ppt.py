@@ -89,11 +89,9 @@ def start():
                 if readedFrame >= frameCount:
                     break
 
-                percent_old = math.floor(readedFrame / frameCount * 100)
                 readedFrame += 1
                 percent = math.floor(readedFrame / frameCount * 100)
-                if percent != percent_old:
-                    print('process:' + str(percent) + '%')
+                print('process:' + str(percent) + '%')
                 if readedFrame % FPS != 0:
                     continue
 
