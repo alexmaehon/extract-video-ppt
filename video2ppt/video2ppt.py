@@ -84,13 +84,13 @@ def start():
 
     while(True):
             click.clear()
-            print('process:' + str(math.floor(readedFrame / frameCount * 100)) + '%')
             ret, frame = vcap.read()
             if ret:
                 if readedFrame >= frameCount:
                     break
 
                 readedFrame += 1
+                print('process:' + str(math.floor(readedFrame / frameCount * 100)) + '%')
                 if readedFrame % FPS != 0:
                     continue
 
